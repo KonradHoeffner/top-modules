@@ -19,12 +19,13 @@ services:
       - docker-compose.env
 
   backend:
-    build: parent/backend
+    build: parent
     restart: unless-stopped
     depends_on:
       - db
     volumes:
       - query-results:/data/query_results
+      # - top-api.tgz:/usr/src/top-api/top-api.tgz:ro # does not work because the frontend needs it at build time
     environment:
       - DB_HOST=db
       - DB_PORT=5432

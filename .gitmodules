@@ -1,6 +1,6 @@
 [submodule "frontend"]
 	path = frontend
-	url = git@github.com:Onto-Med/top-frontend.git
+	url = git@github.com:KonradHoeffner/top-frontend.git
 	branch = master
 [submodule "parent"]
 	path = parent
