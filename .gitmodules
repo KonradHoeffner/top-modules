@@ -1,8 +1,8 @@
-[submodule "frontend"]
-	path = frontend
-	url = git@github.com:KonradHoeffner/top-frontend.git
-	branch = master
 [submodule "parent"]
 	path = parent
 	url = git@github.com:KonradHoeffner/top-parent.git
+	branch = master
+[submodule "top-frontend"]
+	path = top-frontend
+	url = git@github.com:KonradHoeffner/top-frontend.git
 	branch = master

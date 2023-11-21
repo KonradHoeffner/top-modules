@@ -18,11 +18,14 @@ services:
     env_file:
       - docker-compose.env
 
-  backend:
+  base:
+    image: top-base
     build: parent
+
+  backend:
+    build: parent/top-backend
     restart: unless-stopped
-    depends_on:
-      - db
+    depends_on: [base, db]
     volumes:
       - query-results:/data/query_results
       # - top-api.tgz:/usr/src/top-api/top-api.tgz:ro # does not work because the frontend needs it at build time
@@ -36,10 +39,9 @@ services:
       - docker-compose.env
 
   frontend:
-    build: frontend
+    build: top-frontend
     restart: unless-stopped
-    depends_on:
-      - backend
+    depends_on: [base, backend]
     env_file:
       - docker-compose.env
 
