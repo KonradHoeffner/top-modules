@@ -1,3 +1,15 @@
+# Integrated TOP Framework Deployment
+
+This is an unfinished experimental fork of the TOP Framework Deployment using Git submodules and a multi-module Maven project instead of the original architecture based on separate Docker images deployed on GitHub packages.
+The reason for this experiment is that it is difficult and time-consuming to test changes in the original deployment especially when multiple components are to be changed in parallel.
+After checking out this repository, you need to:
+
+```bash
+git submodule update --init
+```
+
+Original README below.
+
 # TOP Framework Deployment
 This repository contains deployment instructions and resources for the TOP Framework.
 
