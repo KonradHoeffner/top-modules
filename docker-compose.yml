@@ -28,7 +28,7 @@ services:
     depends_on: [base, db]
     volumes:
       - query-results:/data/query_results
-      # - top-api.tgz:/usr/src/top-api/top-api.tgz:ro # does not work because the frontend needs it at build time
+      - ./configs:/configs:ro
     environment:
       - DB_HOST=db
       - DB_PORT=5432
