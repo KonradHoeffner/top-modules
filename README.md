@@ -5,7 +5,13 @@ The reason for this experiment is that it is difficult and time-consuming to tes
 After checking out this repository, you need to:
 
 ```bash
+cp docker-compose.env.tpl docker-compose.env
 git submodule update --init
+cd parent
+git submodule update --init
+cd ..
+docker compose pull
+docker compose up --build
 ```
 
 Original README below.
