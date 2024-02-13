@@ -19,7 +19,6 @@ services:
       - docker-compose.env
 
   base:
-    image: top-base
     build: parent
 
   backend:
