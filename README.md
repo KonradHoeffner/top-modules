@@ -2,17 +2,17 @@
 
 This is an unfinished experimental fork of the TOP Framework Deployment using Git submodules and a multi-module Maven project instead of the original architecture based on separate Docker images deployed on GitHub packages.
 The reason for this experiment is that it is difficult and time-consuming to test changes in the original deployment especially when multiple components are to be changed in parallel.
-After checking out this repository, you need to:
+This fork uses **[Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)**, so clone it with the `--recursive` parameter, e.g. for SSH `git clone git@github.com:KonradHoeffner/top-modules.git --recursive`.
+After checking out this repository, you need to copy `docker-compose.env.tpl` to `docker-compose.env` and adapt it.
 
 ```bash
+git clone git@github.com:KonradHoeffner/top-modules.git --recursive
 cp docker-compose.env.tpl docker-compose.env
-git submodule update --init
-cd parent
-git submodule update --init
-cd ..
 docker compose pull
 docker compose up --build
 ```
+
+When updating with `git pull`, you also need to `git submodule update --recursive`.
 
 Original README below.
 
