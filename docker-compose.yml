@@ -20,6 +20,8 @@ services:
 
   base:
     build: parent
+    # specify explicit image name as source for the other components
+    image: top-base
 
   backend:
     build: parent/top-backend
