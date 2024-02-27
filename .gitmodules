@@ -5,4 +5,4 @@
 [submodule "top-frontend"]
 	path = top-frontend
 	url = ../top-frontend.git
-	branch = ag-grid
+	branch = master
